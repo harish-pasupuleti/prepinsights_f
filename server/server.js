@@ -73,6 +73,6 @@ server.post(
 // Error handling middleware
 server.use(errorHandler);
 
-server.listen(PORT, () => {
+server.listen(PORT||3000, () => {
     console.log('Listening on port -> ' + PORT);
 });
