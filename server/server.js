@@ -27,13 +27,15 @@ const PORT = process.env.PORT || 3000;
 initializeFirebase();
 
 // Middleware
-server.use(cors());
+
 const corConfig ={
     origin:"*",
     credential:true,
     methods:["GET","POST","PUT"]
     
 }
+server.options("",cors(corConfig))
+server.use(cors(corConfig));
 server.use(express.json({ limit: '2mb' }));
 server.use(express.urlencoded({ limit: '2mb', extended: true }));
 
