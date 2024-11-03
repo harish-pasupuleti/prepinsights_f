@@ -1,5 +1,5 @@
 import admin from 'firebase-admin';
-const serviceAccountKey = require("../prepinsights-523c5-firebase-adminsdk-7wqhl-4b30957308.json");
+import serviceAccountKey from "../prepinsights-523c5-firebase-adminsdk-7wqhl-4b30957308.json" assert { type: "json" };
 
 export const initializeFirebase = () => {
     admin.initializeApp({
