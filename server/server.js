@@ -28,6 +28,12 @@ initializeFirebase();
 
 // Middleware
 server.use(cors());
+const corConfig ={
+    origin:"*",
+    credential:true,
+    methods:["GET","POST","PUT"]
+    
+}
 server.use(express.json({ limit: '2mb' }));
 server.use(express.urlencoded({ limit: '2mb', extended: true }));
 
